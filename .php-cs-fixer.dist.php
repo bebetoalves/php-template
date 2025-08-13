@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-$finder = (new PhpCsFixer\Finder())
+$finder = new PhpCsFixer\Finder()
     ->in(__DIR__)
     ->append([__FILE__])
     ->exclude(['vendor']);
 
-return (new PhpCsFixer\Config())
+return new PhpCsFixer\Config()
     ->setRules([
         '@Symfony' => true,
         '@Symfony:risky' => true,
